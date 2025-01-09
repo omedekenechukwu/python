@@ -106,6 +106,48 @@ while True:
   if response == 'exit':
     sys.exit()
 '''
-def spam(eggs):
-  print(eggs)
-spam(45)
+print('''Dear Alice,
+
+How have you been? I hope you're doing well
+      
+I hope to see you soon.
+'''
+)
+
+# MULTILINE STRINGS
+'''
+print('How are you?')
+feeling = input()
+if feeling.lower() == 'great':
+  print('I feel great too')
+else: 
+  print('I hope the rest of your day is good.')
+'''
+# TESTING THE .isX METHODS
+'''
+while True:
+  print('Please Enter your age:')
+  age = input()
+  if age.isdecimal():
+    break
+  else:
+    print('Enter a valid number as your age')
+
+while True:
+  print('Enter your password:')
+  password = input()
+  if password.isalnum():
+    break
+  else:
+    print('Enter a valid password of alphabets and numbers')
+'''
+
+# TESTING THE .ljust(), rjust() and center()
+def main(itemsDict, leftwidth, rightwidth):
+  print('PICNIC ITEMS'.center(leftwidth + rightwidth, '-'))
+  for k, v in itemsDict.items():
+    print(k.ljust(leftwidth, '.') + str(v).rjust(rightwidth))
+
+items = {'sandwiches': 4, 'fruits': 12, 'beverages': 200, 'rice': 4000}
+main(items, 12, 5)
+main(items, 20, 6)
